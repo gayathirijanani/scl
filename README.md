@@ -12,7 +12,9 @@ Practicing below website for learning purpose.
 
 Note: mark as completed once completed each task.
 
-https://nicepage.com/website-design/preview/online-school-3636971?device=desktop
+Website url: https://nicepage.com/website-design/preview/online-school-3636971?device=desktop
+
+
 
 **Need to be fixed following issues.**
 1. Alignment is not match with original website(https://nicepage.com/website-design/preview/online-school-3636971?device=desktop).
