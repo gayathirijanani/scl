@@ -12,22 +12,22 @@
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* header */
 .header {
   overflow: hidden;
   background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1;    
 }
 
-.logo{
-            
+.logo{        
     margin-left: 4%;
 }
 
-.menu{
-           
+.menu{        
    float: right;
    margin-right: 4%;
    margin-top: 2%; 
@@ -48,7 +48,6 @@ h1 {
 }
 
 .p1 {
-    font-family: ubuntu, sans-serif;
     color: white;
     font-size: 18px;
     letter-spacing: 1px;
@@ -56,7 +55,6 @@ h1 {
 }
 
 .b1 {
-    font-family: 'Open Sans', sans-serif;
     font-size: 17px;
     letter-spacing: 1px;
     font-weight: 600;
@@ -68,52 +66,21 @@ h1 {
     color: aliceblue;
 }
 
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-.column {
-    margin-left: 2%;
-    float: left;
-    width: 48%;
-    padding: 40px;/* Should be removed. Only for demonstration */
-  }
-
   .womanimg{
     margin-top: 8%;
   min-width: 80%;
+  margin-left: 4%;
    
-}
-
-@media (max-width: 992px) {
-  .column {
-    text-align: center;
-    padding-left: 12%;
-    padding-right: 18%;
-    width: 100%;
-  }
 }
 
 
 /*section 2*/
 
 .section2{
-  font-family:ubuntu ,sans-serif; 
   background-color: rgb(206, 55, 131);
   color: white;
-  min-height: 933px;
-  padding-top: 1%;
-}
-
-.container{
-  width: 28%;
-  height: 30%;
   float: left;
-  margin-left: 4%;
-  margin-top: 5%;
+  padding-top: 1%;
 }
 
 h2{
@@ -124,14 +91,11 @@ h2{
 }
 
 .sec2heading2 {
-  width: 14%;
-  height: 4%;
   font-size: 48px;
   margin-top: 5%;
 }
 
 .sec2heading3 {
-  height: 4%;
   font-size: 20px;
 }
 
@@ -141,45 +105,40 @@ h2{
 }
 
 @media (max-width: 768px) {
-
-  .section2{
-    min-height: 1320px;
+  .b1{
+    margin-left: 24%;
   }
+}
 
-  .container{
-  width: 44%;
-  }
+.margin{
+  margin-left: 2%;
 }
 
 /*section 3*/
 
-.section3{
-  font-family:ubuntu ,sans-serif; 
+.section3{ 
   background-color: black;
-  min-height: 840px;
+  float: left;
+  padding-bottom: 5%;
 }
 
 .sec3heading1{
   color: white;
-  font-size: 60px;
-  letter-spacing: 1px;
-  font-weight: 700;
   margin: 0;
   padding-top: 5%;
   line-height: 1.1;
-  text-align: center;
 }
 
-.pathway{
-  float: left;
-  width: 28%;
-  padding: 10px;
+.pathparts{
   height: 500px;
   border-radius: 4%;
+  margin-top: 5%;
+  margin-left: 6%;
 }
 
 .yellow{
   background-color: rgb(234, 234, 114);
+
 }
 
 .pink{
@@ -192,8 +151,7 @@ h2{
 
 .sec3heading2{
    
-  font-size: 28px; 
-  padding-left: 20px;
+  font-size: 24px; 
 }
 
 .sec3hr1{
@@ -203,35 +161,11 @@ h2{
 
 .sec3para1{
  
-  margin-top: 40%; 
+  margin-top: 24px; 
   font-size: 16px; 
-  font-weight: 500; 
-  padding-left: 26px;  
-  padding-right: 17px; 
   line-height: 2;
 }
 
-@media (max-width: 768px) {
-  .section3{
-    min-height: 1280px;
-  }
-
-  .pathway{
-    width: 44%;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .section3{
-    min-height: 1850px;
-  }
-
-  .pathway{
-    width: 92%;
-  }
-
-}
 
 /*section 4*/
 
@@ -247,18 +181,18 @@ h2{
 }
 
 .sec4para1{
-  font-family:ubuntu ,sans-serif; 
   font-size: 17px; 
   letter-spacing: 1px;
   line-height: 1.8; 
   margin-top: 30px;
+  margin-left: 6%;
 }
 
 .sec4button{
   font-family: sans-serif; 
   font-size: 18px; 
   letter-spacing: 1px; 
-  margin-left: 10px ;
+  margin-left: 28px ;
   padding-top: 12px; 
   padding-right: 35px; 
   padding-bottom: 13px; 
@@ -291,24 +225,19 @@ h2{
   height: 500px;
 }
 
-@media (max-width: 992px) {
-  .button{
-    float: none;
-  }
-}
-
-
 @media (max-width: 600px) {
   .button{
-    float: none;
+    margin-left: 20%;
   }
 }
+
 
 /*section 5*/
 
 .section5{
-  min-height: 980px;
   background-color: hotpink;
+  float: left;
+  padding-bottom: 5%;
 }
 
 .sec5heading1{
@@ -368,27 +297,13 @@ h2{
   height: 600px;
 }
 
-@media (max-width: 768px) {
-
-  .section5{
-    min-height: 1800px;
-  }
-  
-  .height{
-    height: 680px;
-  }
+.pathway{
+  margin-left: 2%;
+  height: 650px;
+  border-radius: 4%;
+  margin-top: 5%;
 }
 
-@media (max-width: 600px) {
-
-  .section5{
-    min-height: 2450px;
-  }
-  
-  .height{
-    height: 680px;
-  }
-}
 
 /*section 6*/
 
@@ -399,8 +314,8 @@ h2{
 
 .boxx{
   margin-top: 4%;
-  height: 450px;
-  width: 450px;
+  height: 400px;
+  width: 400px;
 }
 
 .sec6para1{
@@ -433,11 +348,23 @@ h2{
   color: aliceblue;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 762px) {
+
+  .sec6para1{
+    text-align: center;
+  }
+  .sec6para2{
+    text-align: center;
+  }
+  .sec6btn{
+    margin-left: 20%;
+  }
   .boxx{
-    padding-right: 12%;
-    height: 350px;
-    width: 350px;
+    margin-top: 4%;
+    margin-left: 10%;
+    height: 300px;
+    width: 300px;
   }
   
 }
@@ -445,27 +372,24 @@ h2{
 /*section 7*/
 
 .section7{
-  min-height: 900px;
   background-color: hotpink;
+  float: left;
+  padding-bottom: 5%;
 }
 
 .box{
   background-color: white;
-  width: 22%;
-  height: 350px;
+  height: 380px;
   border-radius: 5%;
-  margin-left: 8%;
+  margin-left: 6%;
+  margin-top: 5%;
   
 }
 
 .sec7para1{
-  padding-left: 8%;
-  padding-right: 8%;
-  color: rgb(60, 60, 60);  
-  margin-top: 25%;  
+  color: rgb(60, 60, 60);    
   font-style: italic; 
   font-size: 18px; 
-  margin-top: 37px; 
   line-height: 28px;
 }
 
@@ -477,47 +401,18 @@ h2{
   margin-top: 10%; 
 }
 
-@media only screen and (max-width:850px) {
-
-  .section7{
-      min-height: 1200px;
-  }
-
-  .sec7heading1{
-    font-size: 26px;
-  }
-
-  .box{
-      margin-left: 12%;
-    width: 33%;
-  }
-
-}
-
-@media only screen and (max-width:576px) {
-
-  .section7{
-      min-height: 2300px;
-  }
-
-  .box{
-      margin-left: 20%;
-    width: 60%;
-  }
-
-}
 
 /*section 8*/
 
 .section8{
-  min-height: 1000px;
   background-color: rgb(208, 210, 211);
+  float: left;
+  padding-bottom: 5%;
 }
 
 
 .sec8div1{
   margin-top: 5%;
-  margin-left: 1%;
   position: relative;  
   width:100%;
   float:left;
@@ -526,9 +421,7 @@ h2{
 .sec8div2{
   width:46%;
   float:left;
-  margin-left: 30px; 
   height:900px; 
-  box-sizing: border-box; 
   background-color: #ee5caa; 
 }
 
@@ -609,73 +502,64 @@ h2{
   font-weight: 600;
 }
 
-@media only screen and (max-width:947px){
-  .sec8btn{
-  padding-right: 50px;
-  padding-left: 50px;
-  }
-}
-
-@media only screen and (max-width:768px){
-
-  .section8{
-    min-height: 1900px;
-  }
-
-  .sec8div2{
-    width: 90%;
-  }
-
-  .sec8div4{
-    margin-top: 5%;
-    margin-left: 4%;
-    width: 90%;
-  }
-
-  .sec8btn{
-  padding-right: 50px;
-  padding-left: 50px;
-  }
-}
-
-@media only screen and (max-width:600px){
-.section8{
-  height: 1900px;
-}
-
-  .sec8div2{
-      width: 90%;
-      margin-left: 5%;
-  }
-
-  .sec8div4{
-      width: 90%;
-      margin-left: 5%;
-      margin-top: 10%;
-  }
-}
 
 /*footer*/
 .footer{
-  height: 220px;
   background-color: rgb(21, 21, 21);
 }
 
 .ftpara{
   padding-top: 8%;
   text-align: center; 
-  font-family:sans-serif ; 
   color: white;
 }
 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 44px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 90%;
+}
 
 
-
-/* Style the content */
-.content {
-  background-color: #ddd;
-  padding: 10px;
-  height: 200px; /* Should be removed. Only for demonstration */
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 40%;}
+  .col-s-4 {width: 46%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 100%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 30%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
 }
 
 </style>
@@ -683,7 +567,7 @@ h2{
 <body>
 
 <div class="header">
-    <div class="logo"><img src="logo.png" height="70px">
+    <div class="logo"><img src="logo.png" height="70px"></div>
     <img class="menu" src="menu.png" height="40px">
 </div>
 
@@ -691,13 +575,13 @@ h2{
 
 <section class="section1">
     <div class="row">
-        <div class="column">
+        <div class="col-s-6 col-6">
             <h1>Online School</h1>
             <p class="p1">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                 Excepteur sint occaecat cupidatat non proident</p>
                 <button class="b1">learn more</button> 
         </div>
-        <div class="column">
+        <div class="col-s-6 col-6">
             <img class="womanimg" src="woman.png">
         </div>
       </div>
@@ -707,72 +591,76 @@ h2{
 
 <section class="section2">
   <h2>Start learning from<br>the world’s best institutions</h2>
-  <div class="container">
+  <div class="row">
+  <div class="margin col-s-4 col-4">
       <h3 class="sec2heading2">01</h3>
       <h5 class="sec2heading3">Marketing</h5>
       <p class="sec2para1">Ut enim ad minim veniam, quis nostrud 
           exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
           in reprehenderit in voluptate velit</p>
   </div>
-  <div class="container">
+  <div class="margin col-s-4 col-4">
       <h3 class="sec2heading2">02</h3>
 <h5 class="sec2heading3">Web Design</h5> 
 <p class="sec2para1">Ut enim ad minim veniam, quis nostrud 
 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p>
   </div> 
-  <div class="container">
+  <div class="margin col-s-4 col-4">
       <h3 class="sec2heading2">03</h3>
 <h5 class="sec2heading3">Exel Course</h5> 
 <p class="sec2para1">Ut enim ad minim veniam, quis nostrud 
 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p>
   </div> 
-  <div class="container">
+  <div class="margin col-s-4 col-4">
       <h3 class="sec2heading2">04</h3>
       <h5 class="sec2heading3">Branding</h5> 
       <p class="sec2para1">Ut enim ad minim veniam, quis nostrud 
        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p>
   </div> 
-  <div class="container">
+  <div class="margin col-s-4 col-4">
       <h3 class="sec2heading2">05</h3>
       <h5 class="sec2heading3">Leadership</h5> 
       <p class="sec2para1">Ut enim ad minim veniam, quis nostrud 
        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p>
   </div> 
-  <div class="container">
+  <div class="margin col-s-4 col-4">
       <h3 class="sec2heading2">06</h3>
       <h5 class="sec2heading3">Python Basics</h5> 
       <p class="sec2para1">Ut enim ad minim veniam, quis nostrud 
        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p>
   </div> 
+  </div>
 </section>
 
 <!-- section 3 -->
  
 <section class="section3">
+  <div class="row">
   <h2 class="sec3heading1">Pathways for your <br>advancement</h2>
-  <div class="container pathway yellow">
+  <div class="col-s-3 col-3 pathparts yellow">
       <h4 class="sec3heading2">Executive <br>Education</h4>
       <hr class="sec3hr1">
       <p class="sec3para1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
   </div>
-  <div class="container pathway pink">
+  <div class="col-s-3 col-3 pathparts pink">
       <h4 class="sec3heading2">Professional <br>Certificates</h4>
       <hr class="sec3hr1">
       <p class="sec3para1">Sample text. Click to select the text box. Click 
           again or double click to start editing the text.</p>
   </div>
-  <div class="container pathway blue">
+  <div class="col-s-3 col-3 pathparts blue">
       <h4 class="sec3heading2"> Online degree <br>programs</h4>
       <hr class="sec3hr1">
       <p class="sec3para1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
   </div>
+</div>
 </section>
 
 <!-- section 4 -->
 
 <section class="section4">
   <div class="row">
-      <div class="column">
+      <div class="col-s-6 col-6">
         <h2 class="sec4heading1">
           For every student,
       every classroom.
@@ -791,7 +679,7 @@ exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
         <button class="sec4button">Classes</button>
     </div>
       </div>
-      <div class="column">
+      <div class="col-s-6 col-6">
         <img class="girl" src="girl.png">
       </div>
     </div>
@@ -803,20 +691,20 @@ exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
   <h2 class="sec5heading1">Free Online Courses</h2>
   <p class="sec5para1">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-  <div class="container pathway white height">
+  <div class="col-s-4 col-4 pathway white height">
       <img class="students" src="fg.jpg">
       <h5 class="sec5heading2">Arts & Humanities</h5>
       <p class="sec5para2">
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
           <p class="sec5para3"><u>MORE</u></p>
   </div>
-  <div class="container pathway white height">
+  <div class="col-s-4 col-4 pathway white height">
       <img class="students" src="22.jpg">
       <h5 class="sec5heading2">Health & Medicine</h5>
       <p class="sec5para2"> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
       <p class="sec5para3"><u>MORE</u></p>
   </div>
-  <div class="container pathway white height">
+  <div class="col-s-4 col-4 pathway white height">
       <img class="students" src="fgfgg.jpg">
       <h5 class="sec5heading2">Engineering</h5>
       <p class="sec5para2"> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
@@ -828,10 +716,10 @@ exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
 
 <section class="section6">
   <div class="row">
-      <div class="column">
+      <div class="col-s-6 col-6">
         <img class="boxx" src="box.png">
       </div>
-      <div class="column">
+      <div class="col-s-6 col-6">
         <p class="sec6para1">
           The highest quality online courses from institutions
       </p>
@@ -846,32 +734,32 @@ exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
 <!-- section 7 -->
 
 <div class="section section7">
-  <div class="container box">
+  <div class="box col-s-3 col-3">
       <p class="sec7para1">Proin sed libero enim sed faucibus turpis. 
           At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl. Enim nunc</p>
           <h3 class="sec7heading1">Celia Almeda</h3>
   </div>
-  <div class="container box">
+  <div class="box col-s-3 col-3">
       <p class="sec7para1">Proin sed libero enim sed faucibus turpis. 
           At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl. Enim nunc</p>
           <h3 class="sec7heading1">Celia Almeda</h3>
   </div> 
-  <div class="container box">
+  <div class="box col-s-3 col-3">
       <p class="sec7para1">Proin sed libero enim sed faucibus turpis. 
           At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl. Enim nunc</p>
           <h3 class="sec7heading1">Celia Almeda</h3>
   </div> 
-  <div class="container box">
+  <div class="box col-s-3 col-3">
       <p class="sec7para1">Proin sed libero enim sed faucibus turpis. 
           At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl. Enim nunc</p>
           <h3 class="sec7heading1">Celia Almeda</h3>
   </div> 
-  <div class="container box">
+  <div class="box col-s-3 col-3">
       <p class="sec7para1">Proin sed libero enim sed faucibus turpis. 
           At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl. Enim nunc</p>
           <h3 class="sec7heading1">Celia Almeda</h3>
   </div> 
-  <div class="container box">
+  <div class="box col-s-3 col-3">
       <p class="sec7para1">Proin sed libero enim sed faucibus turpis. 
           At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Ut sem nulla pharetra diam sit amet nisl. Enim nunc</p>
           <h3 class="sec7heading1">Celia Almeda</h3>
@@ -882,7 +770,7 @@ exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
 <section class="section8">
 
   <div class="sec8div1">
-      <div class="sec8div2">
+      <div class="sec8div2 col-s-6 col-6">
           <div class="sec8div3">
               <h2 class="sec8heading1">Contact Us</h2>
 <h5 class="sec8heading2">Any questions or remarks? Just write us a message!</h5>
@@ -897,7 +785,7 @@ exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
 <p>340 Main St, Venice CA 902291, USA</p>
           </div>
       </div>
-      <div class="sec8div4">
+      <div class="sec8div4 col-s-6 col-6">
           <div class="sec8div5">
 <h4 class="sec8heading4">Get in Touch</h4>
 <p class="sec8heading5">Have an inquiry or some feedbak for us? Fill out the form below to contact our team.</p>
@@ -914,7 +802,6 @@ exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
 <label for="message">How can we help?</label><br> <br>
 <textarea class="sec8input1" name="message" rows="10" cols="30"></textarea>
 <hr>
-
 <button class="sec8btn">SUBMIT</button>
           </div>
       </div>
