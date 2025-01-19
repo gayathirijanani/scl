@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #f0f0f0; 
+            padding: 20px; 
+        }
+        h1 {
+            color: #333;
+        }
+        .question {
+            margin: 20px 0;
+            background-color: #fff;
+            padding: 15px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            display: inline-block; 
+            margin-right: 40px; 
+        }
+        button.option-button {
+            padding: 10px 20px;
+            background-color: #808080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+            width: 200px;
+        }
+        button.option-button {
+            background-color: #696969;
+        }
+        button.option-button.selected {
+            background-color: #FFA500;
+        }
+        button.option-button.correct {
+            background-color: green;
+        }
+        button.option-button.correct::after {
+            content: "✓";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: green;
+            color: white;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        button.option-button.incorrect {
+            background-color: #f44336;
+        }
+        button.option-button.incorrect::after {
+            content: "X";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px;
+        }
+        button.submit-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button.submit-button:hover {
+            background-color: #45a049;
+        }
+        .correct {
+            background-color: #45a049;
+        }
+        .incorrect {
+            background-color: #f44336;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: green;
+        }
+
+        #score{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz</h1>
+    <div id="quiz-container"></div>
+    <button class="submit-button" onclick="submitQuiz()">Submit</button>
+    <div id="score"></div>
+
+    <script>
+        var questions = [
+            {
+                question: "Which of the following colors contain equal amounts of RBG?", 
+                options: ["White", "Gray", "Black", "All of the above"], 
+                answer: 3 }, 
+                { 
+                    question: "What is the correct syntax to write an HTML comment", 
+                    options: ["<-- Comment -->", "// Comment", "# Comment", "/* Comment */"], 
+                    answer: 0 }, 
+                    { 
+                        question: "How can we change the text color of an element?", 
+                        options: ["Background-color", "Color", "Both A and B", "None of the above"], 
+                        answer: 1 },
+                        { 
+                        question: "In how many ways can CSS be written in?", 
+                        options: ["1", "2", "3", "4"], 
+                        answer: 2 },
+                        { 
+                        question: "What type of CSS is generally recommended for designing large web pages?", 
+                        options: ["Inline", "Internal", "External", "None of the above"], 
+                        answer: 2 },
+                        { 
+                        question: "Which HTML element is used to create a hyperlink?", 
+                        options: ["link", " a", " href", " button"], 
+                        answer: 1 },
+                        { 
+                        question: "In CSS, how would you center a block-level element horizontally within its parent container?", 
+                        options: [" margin: auto;", "text-align: center;", "position: center;", " align: middle;"], 
+                        answer: 0 },
+                        { 
+                        question: "Which HTML tag is used for the largest heading?", 
+                        options: ["heading", " h1", "h6", "head"], 
+                        answer: 1 },
+                        { 
+                        question: "Which HTML attribute is used to define inline styles directly on an element?", 
+                        options: ["class", "id", " style", " css"], 
+                        answer: 2 },
+                        { 
+                        question: "What is the default value of the position property in CSS?", 
+                        options: ["relative", " absolute", " fixed", "static"], 
+                        answer: 3 }, 
+                       ]; 
+                       var selectedAnswers = new Array(questions.length).fill(null); 
+                       function loadQuiz() 
+                       { 
+                        var quizContainer = document.getElementById("quiz-container"); 
+                        for (var i = 0; i < questions.length; i++) { 
+                            var questionElement = document.createElement("div"); 
+                            questionElement.className = "question"; 
+                            questionElement.innerHTML = "<strong>" + (i + 1) + ". " + questions[i].question + "</strong>"; 
+                            var optionsList = document.createElement("ul"); 
+                            optionsList.className = "options"; 
+                            for (var j = 0; j < questions[i].options.length; j++) { 
+                                var optionItem = document.createElement("li"); 
+                                optionItem.innerHTML = '<button class="option-button" id="option-' + i + '-' + j + '" onclick="selectOption(' + i + ', ' + j + ')">' + questions[i].options[j] + '</button>'; 
+                                optionsList.appendChild(optionItem); 
+                            } 
+                            questionElement.appendChild(optionsList); 
+                            quizContainer.appendChild(questionElement); 
+                        } 
+                    } 
+                    function selectOption(questionIndex, optionIndex) { 
+                        selectedAnswers[questionIndex] = optionIndex; 
+                        var optionButtons = document.querySelectorAll("#quiz-container .question:nth-child(" + (questionIndex + 1) + ") .option-button"); 
+                        for (var i = 0; i < optionButtons.length; i++) 
+                        { 
+                            optionButtons[i].classList.remove("selected"); 
+                        } 
+                        document.getElementById("option-" + questionIndex + "-" + optionIndex).classList.add("selected"); 
+                    } 
+                    function submitQuiz() { 
+                        var correctCount = 0; 
+                        var incorrectCount = 0; 
+                        for (var i = 0; i < questions.length; i++) { 
+                            if (selectedAnswers[i] === questions[i].answer) { 
+                                var correctOption = document.getElementById("option-" + i + "-" + selectedAnswers[i]); 
+                                if (correctOption) { 
+                                    correctOption.classList.add("correct"); 
+                                    correctOption.classList.remove("selected"); 
+                                }
+                                correctCount++; 
+                            } else { 
+                                var incorrectOption = document.getElementById("option-" + i + "-" + selectedAnswers[i]);
+                                if (incorrectOption) {
+                                    incorrectOption.classList.add("incorrect");
+                                    incorrectOption.classList.remove("selected");
+                                }
+                                incorrectCount++; 
+                            } 
+                        } 
+                        var scoreBreakdownContainer = document.getElementById("score"); 
+                        scoreBreakdownContainer.innerHTML = ` <div class='correct'>Correct: ${correctCount}</div> <div class='incorrect'>Incorrect: ${incorrectCount}</div> `; 
+                    } 
+                    window.onload = loadQuiz;
+    </script>
+</body>
+</html>
